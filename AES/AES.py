@@ -1,4 +1,7 @@
-import sys
+# Hector Lopez
+# 65-764-0379
+# AES
+# September 16, 2019
 import numpy as np
 import copy as copy
 
@@ -48,6 +51,7 @@ def InvCipher(key, data):
         print("round["+currRound+"].is_box\t\t"+hexToKey(data))
         data = AddRoundKey(data, expandedKey[y*4 : (y*4) + 4])
         printRound(y, expandedKey, i + 1)
+        print("round["+str(Nr)+"].ik_add\t"+hexToKey(data))
         data = InvMixColumns(data)
         print("round["+currRound+"].im_col\t\t"+hexToKey(data))
         y-=1
@@ -58,6 +62,8 @@ def InvCipher(key, data):
     data = InvSubBytes(data)
     print("round["+str(Nr)+"].is_box\t"+hexToKey(data))
     data = AddRoundKey(data, expandedKey[0:4])
+    print("round["+str(Nr)+"].ik_add\t"+hexToKey(data))
+
     printRound(0, expandedKey, Nr)
     print("round["+str(Nr)+"].ioutput\t"+hexToKey(data))
     return data.transpose()
