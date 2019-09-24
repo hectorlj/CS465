@@ -1,0 +1,34 @@
+Hector Lopez
+hlj239
+
+1.
+ECB P and Q will only differ in block 10
+CBC P and Q blocks will differ after block 10
+CTR P and Q will differ after block 10
+CFB P and Q will differ after block 10
+OFB P and Q will differ in all blocks
+
+2.
+ECB P and Q will have similar patterns but will still differ
+CBC P and Q will differ in all blocks
+CTR P and Q will differ in all blocks
+CFB P and Q will differ in all blocks
+OFB P and Q will differ in all blocks
+
+3.
+ECB all blocks will be the same, except for # 25
+CBC all blocks will be the same, except for # 25
+CTR all blocks will be the same, except for # 25
+CFB all blocks will be the same, except for # 25
+OFB all blocks will be the same, except for # 25
+
+4.
+ECB block 50
+CBC blocks 1 - 50
+CTR block 50
+CFB blocks 49 and 50
+OFB block 50
+
+5. ECB/CTR
+6. ECB/CBC/CFB/CTR/
+7. OFB/CTR
