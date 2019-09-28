@@ -36,25 +36,29 @@ def hash(myString, n):
     shortHash = binaryHash[0:n + 1]
     return shortHash
 
-n = 8
+n = 16
+# while n < 33:
+
 expectedPreimage = 2**n
 expectedCollision = 2**(n/2)
 totalTrials = 100
 currTrial = 0
 x = 0
 average = 0
-while x < totalTrials:
+for x in range(totalTrials):
     currTrial = preimage("hello there", n)
     average = average + currTrial
-    x = x + 1
+
 print("n = ", str(n), "\n Average preimage: ", str(average/totalTrials), " \n Expected preimage: ", str(expectedPreimage))
 
 average = 0
 currTrial = 0
 x = 0
 
-while x < totalTrials:
+for x in range(totalTrials):
     currTrial = collision(n)
     average = average + currTrial
-    x = x + 1
+
 print("n = ", str(n), "\n Average collision: ", str(average/totalTrials), " \n Expected collision: ", str(expectedCollision))
+
+    # n = n + 4
