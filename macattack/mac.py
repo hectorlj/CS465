@@ -1,3 +1,5 @@
+# Hector Lopez Trejo    10/2/2019
+# hlj239
 def sha1(data, h0, h1, h2, h3, h4, defaultLength):
     tempBits = toHex(data, False, defaultLength)
     for z in chunks(tempBits, 512):
